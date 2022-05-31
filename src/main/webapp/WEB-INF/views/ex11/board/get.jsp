@@ -60,37 +60,31 @@
 	<div class="container-sm">
 		<div class="row">
 			<div class="col">
-
-				<form method="post" id="modifyForm1"
-					action="${appRoot }/ex11/board/modify">
+				<form method="post" id="modifyForm1" action="${appRoot }/ex11/board/modify">
 					<input type="hidden" name="id" value="${board.id }" />
-					<table class="table table"
-						style="text-align: center; border: 1px solid #0000ff">
+					<table class="table table" style="text-align: center; border: 1px solid #0000ff">
 						<thead>
 							<tr>
-								<th colspan="2"
-									style="background-color: #ffffff; text-align: center; font-size: 40px;">
-									Article Body</th>
+								<th colspan="2" style="background-color: #ffffff; text-align: center; font-size: 40px;">
+									  Article Body
+								</th>
 							</tr>
 						</thead>
+						
 						<tbody>
 							<tr>
 								<td>
-									<input type="text" class="form-control" value="${board.title }"
-										name="title" maxlength="50">
+									<input type="text" class="form-control" value="${board.title }" name="title" maxlength="50">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<textarea class="form-control" name="body" maxlength="2048"
-										style="height: 350px;">${board.body }</textarea>
+									<textarea class="form-control" name="body" maxlength="2048" style="height: 350px;">${board.body }</textarea>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="datetime-local"
-										style="text-align: center; float: right;"
-										value="${board.inserted }" />
+									<input type="datetime-local" style="text-align: center; float: right;" value="${board.inserted }" />
 								</td>
 							</tr>
 						</tbody>
@@ -99,7 +93,7 @@
 
 
 				<c:url value="/ex11/board/list" />
-				<%-- <form action="${modifyLink }" method="post"> --%>
+				<%-- <form action="${modifyLink }" method="post" > --%>
 				<div class="d-grid gap-2 col-6 mx-auto">
 					<button type="submit" form="modifyForm1" class="btn btn-light">MODIFY</button>
 				</div>
